@@ -22,13 +22,13 @@ public class MacaroonWithCaveatExample {
     printInfo(withCaveat);
 
     // verify with caveat
-    MacaroonsVerifier veri = new MacaroonsVerifier(withCaveat);
-    veri.satisfyExact("userid = 666"); // invalid
+    MacaroonsVerifier verifier = new MacaroonsVerifier(withCaveat);
+    verifier.satisfyExact("userid = 666"); // invalid
     System.out.printf("macaroon with id '%s' is valid: %s\n", withCaveat.identifier,
-        veri.isValid(secretKey));
-    veri.satisfyExact("userid = 123456"); // valid
+        verifier.isValid(secretKey));
+    verifier.satisfyExact("userid = 123456"); // valid
     System.out.printf("macaroon with id '%s' is valid: %s\n", withCaveat.identifier,
-        veri.isValid(secretKey));
+        verifier.isValid(secretKey));
   }
 
   private static void printInfo(Macaroon macaroon) {
