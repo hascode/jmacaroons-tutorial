@@ -1,6 +1,6 @@
 # jmacaroons Tutorial
 
-Examples for using [Macaroons] with the Java &trade; implementation, [jmacaroons].
+Examples for implementing distributed authorization using [Macaroons] with the Java &trade; based implementation, [jmacaroons].
 
 For more detailed information, please feel free to visit my blog at [www.hascode.com].
 
@@ -10,7 +10,9 @@ For more detailed information, please feel free to visit my blog at [www.hascode
 Run it using Maven like this:
 
 ```bash
-mvn exec:java -Dexec.mainClass=com.hascode.tutorial.Main 
+mvn exec:java -Dexec.mainClass=com.hascode.tutorial.example1.BaseMacaroonExample 
+mvn exec:java -Dexec.mainClass=com.hascode.tutorial.example1.MacaroonWithCaveatExample
+mvn exec:java -Dexec.mainClass=com.hascode.tutorial.example1.ThirdPartyCaveatExample 
 ```
 
 ----
